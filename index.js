@@ -48,12 +48,10 @@ function promptUser() {
 function writeToFile(filename, data) {
     let svgData = "";
     // Opening tag
-    svgData = '<svg version="1.1" width="100" height="100" xmlns="http://www.w3.org/2000/svg">';
+    svgData = '<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">';
     // Opening tag
     svgData += "<g>";
-    // Takes user input for shape choice and inserts it into SVG file
-    svgData += `${data.shape}`;
-
+    
     // Checks user input, then adds shape properties and shape color to SVG file
     let shapeChoice;
     switch (data.shape) {
@@ -83,7 +81,7 @@ function writeToFile(filename, data) {
         if (err) {
             console.error('Error', err);
         } else {
-            console.log('SVG file made.');
+            console.log('Generated logo.svg');
         }
     });
 }
